@@ -21,6 +21,8 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.ScaffoldDefaults
+import androidx.compose.material3.SnackbarData
+import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -117,6 +119,10 @@ fun ImageCard(
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SnackBarApp(modifier: Modifier = Modifier){
+
+    val snackBarHostState = remember {
+        SnackbarHostState()
+    }
     var textFieldState by remember {
         mutableStateOf("")
     }
@@ -144,20 +150,28 @@ fun SnackBarApp(modifier: Modifier = Modifier){
                 singleLine = true,
                 modifier = Modifier.fillMaxWidth())
             Spacer(modifier = Modifier.height(16.dp))
+
+           
             Button(onClick = {
                 scope.launch {
-                    SnackbarHostState().showSnackbar(" Hello $textFieldState")
+                    snackBarHostState.showSnackbar(" Hello $textFieldState")
                 }
+
 
             }) {
                 Text(text = "Greet Me")
-                
+
+            }
+            Box() {
+                SnackbarHost(hostState = snackBarHostState)
             }
 
         }
 
 
     }
+
+
 
 }
 
