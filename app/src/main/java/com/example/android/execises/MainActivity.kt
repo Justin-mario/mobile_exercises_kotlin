@@ -20,8 +20,7 @@ import androidx.compose.material3.CardDefaults.cardElevation
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.ScaffoldDefaults
-import androidx.compose.material3.SnackbarData
+
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Surface
@@ -151,7 +150,7 @@ fun SnackBarApp(modifier: Modifier = Modifier){
                 modifier = Modifier.fillMaxWidth())
             Spacer(modifier = Modifier.height(16.dp))
 
-           
+
             Button(onClick = {
                 scope.launch {
                     snackBarHostState.showSnackbar(" Hello $textFieldState")
@@ -162,10 +161,7 @@ fun SnackBarApp(modifier: Modifier = Modifier){
                 Text(text = "Greet Me")
 
             }
-            Box() {
-                SnackbarHost(hostState = snackBarHostState)
-            }
-
+            SnackbarHost(hostState = snackBarHostState)
         }
 
 
