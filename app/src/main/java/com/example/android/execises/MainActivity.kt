@@ -1,5 +1,6 @@
 package com.example.android.execises
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -113,7 +114,7 @@ fun ImageCard(
     }
 
 }
-//@SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
+@SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SnackBarApp(modifier: Modifier = Modifier){
@@ -128,7 +129,8 @@ fun SnackBarApp(modifier: Modifier = Modifier){
     Scaffold(
         modifier = modifier.fillMaxSize(),
 
-    ) {it
+    ) {
+//        it
         Column(
 
             horizontalAlignment = Alignment.CenterHorizontally,
