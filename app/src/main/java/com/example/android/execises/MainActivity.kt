@@ -130,7 +130,7 @@ fun SnackBarApp(modifier: Modifier = Modifier){
         modifier = modifier.fillMaxSize(),
 
     ) {
-//        it
+        it
         Column(
 
             horizontalAlignment = Alignment.CenterHorizontally,
