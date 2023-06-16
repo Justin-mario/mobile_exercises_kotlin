@@ -172,15 +172,15 @@ fun SnackBarApp(modifier: Modifier = Modifier){
 
 }
 
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    ExecisesTheme {
-        ImageCard(painter = painterResource(
-            id = R.drawable.facebook_1686131411882_7072147725383231886),
-            contentDescription = "fried egg and fried plantain", title = "Nigerian Breakfast")
-    }
-}
+//@Preview(showBackground = true)
+//@Composable
+//fun GreetingPreview() {
+//    ExecisesTheme {
+//        ImageCard(painter = painterResource(
+//            id = R.drawable.facebook_1686131411882_7072147725383231886),
+//            contentDescription = "fried egg and fried plantain", title = "Nigerian Breakfast")
+//    }
+//}
 
 @Preview(showBackground = true)
 @Composable
