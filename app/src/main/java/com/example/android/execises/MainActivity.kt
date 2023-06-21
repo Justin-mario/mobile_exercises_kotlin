@@ -185,7 +185,7 @@ fun GreetingPreview() {
 @Preview(showBackground = true)
 @Composable
 fun SnackBarPreview() {
-//    ExecisesTheme {
+    ExecisesTheme {
         SnackBarApp()
     }
 }
